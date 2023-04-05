@@ -16,7 +16,7 @@
   #define LUX_X_MAX_POS  LUX_X_BED_SIZE
   #define LUX_X2_MIN_POS 15
   #define LUX_X2_MAX_POS 279
-  #define LUX_Y_MAX_POS 253
+  #define LUX_Y_MAX_POS 240
   #define LUX_Z_MAX_POS 260
 #elif ENABLED(TenlogD3)
   #define LUX_X_BED_SIZE 310
