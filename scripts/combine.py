@@ -31,7 +31,5 @@ for combination in new_combinations:
         new_string += ("-D" + string + " ")
     print(new_string)
 
-# print(new_combinations)
-# print(f"-D{new_combinations[56][0]} -D{new_combinations[56][1]}")
-# ['TenlogHands2', 'ACBed', 'ManualBedEndstop', 'MaintainedPowerSwitch']
-# -DTenlogHnads2 -DACBed -DManualBedEndstop -DMaintainedPowerSwitch
+# SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
+# C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload
