@@ -53,9 +53,9 @@ for combination in new_combinations:
     luxuri_configs.append(LuxuriConfig(combination))
 
 for config in luxuri_configs:
-    print(config.config_name())
-    print(config.command_flags())
-    # config.build()
+    # print(config.config_name())
+    # print(config.command_flags())
+    config.build()
    
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
 # os.system("C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload")
