@@ -35,7 +35,7 @@ class LuxuriConfig:
         config_name = ''
         for string in self.flags:
             config_name += (string + "_")
-        return config_name
+        return config_name[:-1] # Remove trailing _
     def command_flags(self):
         command_flags = ''
         for string in self.flags:
@@ -49,11 +49,13 @@ class LuxuriConfig:
         self.flags = flags
 
 luxuri_configs = []
-for combination in new_combination:
+for combination in new_combinations:
     luxuri_configs.append(LuxuriConfig(combination))
 
 for config in luxuri_configs:
-    config.build()
+    print(config.config_name())
+    print(config.command_flags())
+    # config.build()
    
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
 # os.system("C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload")
