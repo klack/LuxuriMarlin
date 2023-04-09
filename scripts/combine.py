@@ -38,10 +38,13 @@ for combination in new_combinations:
     build_flag_list.append(build_flags)
 
 # Run the build command with the appropriate environment variables
+i=0
 for build_flags in build_flag_list:
     print(build_flags)
     os.environ['PLATFORMIO_BUILD_FLAGS'] = build_flags
-    os.system('C:\\Users\\rlayt\\.platformio\\penv\\Scripts\\platformio.exe run --environment BuildCombination')
+    os.environ['PLATFORMIO_BUILD_DIR'] = "D:\\Temp\\" + str(i +"\\"
+    os.system('pio run --environment BuildCombination')
+    i+=1
 
     
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
