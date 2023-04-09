@@ -1,3 +1,5 @@
+import os
+
 list1 = ["TenlogHands2", "TenlogD3", "TenlogD5"]
 list2 = ["", "ACBed"]
 list3 = ["", "ManualBedEndstop"]
@@ -18,7 +20,6 @@ combinations = [
 ]
 
 print(len(combinations))
-# print(combinations)
 
 new_combinations = []
 for combination in combinations:
@@ -32,4 +33,9 @@ for combination in new_combinations:
     print(new_string)
 
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
+# os.system("C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload")
+# os.environ['PLATFORMIO_BUILD_FLAGS'] = '-DTENLOG_CONFIG="AutoBuildBbby" -DTenlogHands2 -DMaintainedPowerSwitch -DTMC2208Drivers -DACBed -DHictopTitan -DAllMetalHotend -DBLTouchProbe -DMaintainedPowerSwitch'
+# os.system('C:\\Users\\rlayt\\.platformio\\penv\\Scripts\\platformio.exe run --environment BuildCombinations')
+
 # C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload
+# How to set the current pio env?
