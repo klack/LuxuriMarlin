@@ -29,24 +29,32 @@ for combination in combinations:
     new_combination = [string for string in combination if string != ""]
     new_combinations.append(new_combination)
 
-# Generate a list of build flags from the combinations
-build_flag_list = []
-for combination in new_combinations:
-    build_flags = ''
-    for string in combination:
-        build_flags += ("-D" + string + " ")
-    build_flag_list.append(build_flags)
+class LuxuriConfig:
+    flags = []
+    def config_name(self):
+        config_name = ''
+        for string in self.flags:
+            config_name += (string + "_")
+        return config_name
+    def command_flags(self):
+        command_flags = ''
+        for string in self.flags:
+            command_flags += ("-D" + string + " ")
+        return command_flags
+    def build(self): # Run the build command with the appropriate environment variables
+        os.environ['PLATFORMIO_BUILD_FLAGS'] = self.command_flags
+        os.environ['PLATFORMIO_BUILD_DIR'] = "./.pio/build/" + self.config_name
+        os.system('pio run --environment BuildCombination')        
+    def __init__(self, flags):
+        self.flags = flags
 
-# Run the build command with the appropriate environment variables
-i=0
-for build_flags in build_flag_list:
-    print(build_flags)
-    os.environ['PLATFORMIO_BUILD_FLAGS'] = build_flags
-    os.environ['PLATFORMIO_BUILD_DIR'] = "D:\\Temp\\" + str(i +"\\"
-    os.system('pio run --environment BuildCombination')
-    i+=1
+luxuri_configs = []
+for combination in new_combination:
+    luxuri_configs.append(LuxuriConfig(combination))
 
-    
+for config in luxuri_configs:
+    config.build()
+   
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
 # os.system("C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload")
 # os.environ['PLATFORMIO_BUILD_FLAGS'] = '-DTENLOG_CONFIG="AutoBuildBbby" -DTenlogHands2 -DMaintainedPowerSwitch -DTMC2208Drivers -DACBed -DHictopTitan -DAllMetalHotend -DBLTouchProbe -DMaintainedPowerSwitch'
