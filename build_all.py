@@ -1,4 +1,5 @@
 import os
+import sys
 import shutil
 
 def move_files(src_dir, dest_dir, file_exts):
@@ -62,8 +63,10 @@ print(len(luxuri_configs))
 
 i=0
 for config in luxuri_configs:
-    if(i==5):
-        break
+    if(i==0): #Only increment the build number once
+        os.environ['LUX_INCREMENT_BUILD'] = "1"
+    else:
+        os.environ['LUX_INCREMENT_BUILD'] = "0"
     print=(config.get_config_name())
     config.build()
     i+=1

@@ -51,6 +51,7 @@
 #endif
 
 #include "Version.h"
+#include "Lux_version.h"
 
 #include "Conditionals_LCD.h"
 
