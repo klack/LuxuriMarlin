@@ -31,19 +31,20 @@ for combination in combinations:
 
 class LuxuriConfig:
     flags = []
-    def config_name(self):
-        config_name = ''
+    def get_config_name(self):
+        get_config_name = ''
         for string in self.flags:
-            config_name += (string + "_")
-        return config_name[:-1] # Remove trailing _
-    def command_flags(self):
-        command_flags = ''
+            get_config_name += (string + "_")
+        return get_config_name[:-1] # Remove trailing _
+    def get_command_flags(self):
+        get_command_flags = ''
         for string in self.flags:
-            command_flags += ("-D" + string + " ")
-        return command_flags
+            get_command_flags += ("-D" + string + " ")
+        return get_command_flags
     def build(self): # Run the build command with the appropriate environment variables
-        os.environ['PLATFORMIO_BUILD_FLAGS'] = self.command_flags
-        os.environ['PLATFORMIO_BUILD_DIR'] = "./.pio/build/" + self.config_name
+        os.environ['PLATFORMIO_BUILD_FLAGS'] = self.get_command_flags()
+        os.environ['PLATFORMIO_BUILD_DIR'] = "./.pio/build/combinations/" + self.get_config_name()
+        os.environ['LUXURI_FIRMWARE_NAME'] = self.get_config_name()
         os.system('pio run --environment BuildCombination')        
     def __init__(self, flags):
         self.flags = flags
@@ -53,10 +54,12 @@ for combination in new_combinations:
     luxuri_configs.append(LuxuriConfig(combination))
 
 for config in luxuri_configs:
-    # print(config.config_name())
-    # print(config.command_flags())
+    # print(config.get_config_name())
+    # print(config.get_command_flags())
     config.build()
-   
+
+# luxuri_configs[0].build()
+
 # SET PLATFORMIO_BUILD_FLAGS=-DTENLOG_CONFIG="AutoBuild" -DMY_TENLOG -DMaintainedPowerSwitch
 # os.system("C:\Users\rlayt\.platformio\penv\Scripts\platformio.exe run --environment My_Tenlog -t upload")
 # os.environ['PLATFORMIO_BUILD_FLAGS'] = '-DTENLOG_CONFIG="AutoBuildBbby" -DTenlogHands2 -DMaintainedPowerSwitch -DTMC2208Drivers -DACBed -DHictopTitan -DAllMetalHotend -DBLTouchProbe -DMaintainedPowerSwitch'
