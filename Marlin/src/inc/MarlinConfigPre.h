@@ -41,7 +41,7 @@
   #include "../../Configuration_MyTenlog.h"
 #endif
 
-#include "../../LuxBuilder.h"
+#include "../../Lux_builder.h"
 #include "../../Configuration.h"
 
 #ifdef CUSTOM_VERSION_FILE

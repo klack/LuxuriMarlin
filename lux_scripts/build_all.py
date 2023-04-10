@@ -22,7 +22,7 @@ class LuxuriConfig:
             get_command_flags += ("-D" + string + " ")
         return get_command_flags
     def build(self): # Run the build command with the appropriate environment variables
-        os.environ['PLATFORMIO_BUILD_FLAGS'] = self.get_command_flags() + "-DTENLOG_CONFIG=" + self.get_config_name()
+        os.environ['PLATFORMIO_BUILD_FLAGS'] = self.get_command_flags() + "-DTENLOG_CONFIG=" + self.get_config_name() #Add in Tenlog Config Type string
         os.environ['PLATFORMIO_BUILD_DIR'] = "./.pio/build/combinations/" + self.get_config_name()
         os.environ['LUXURI_CONFIG_NAME'] = self.get_config_name()
         os.system('pio run --environment BuildCombination')        
@@ -38,7 +38,7 @@ list5 = ["", "MaintainedPowerSwitch"]
 list6 = ["", "ManualBedEndstop"]
 
 combinations = [
-    (a, b, c, d, e, f ,g) 
+    (a, b, c, d, e, f) 
     for a in list1 
     for b in list2 
     for c in list3 
