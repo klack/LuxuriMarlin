@@ -32,12 +32,10 @@ class LuxuriConfig:
 # Build a list containing the desired build combinations
 list1 = ["TenlogHands2", "TenlogD3", "TenlogD5"]
 list2 = ["TMC2208Drivers", "TMC2209Drivers", "A4988Drivers"]
-list3 = ["", "ACBed"]
-list4 = ["", "ManualBedEndstop"]
+list3 = ["", "BMGExtruder" "HictopTitan"]
+list4 = ["", "BLTouchProbe"]
 list5 = ["", "MaintainedPowerSwitch"]
-list6 = ["", "BLTouchProbe"]
-list7 = ["", "HictopTitan"]
-list8 = ["", "AllMetalHotend"]
+list6 = ["", "ManualBedEndstop"]
 
 combinations = [
     (a, b, c, d, e, f ,g) 
@@ -47,7 +45,6 @@ combinations = [
     for d in list4 
     for e in list5 
     for f in list6 
-    for g in list7
 ]
 
 # Remove empty strings (default configs)
@@ -63,7 +60,12 @@ for combination in new_combinations:
 # Build configs
 print(len(luxuri_configs))
 
-# for config in luxuri_configs:
-#     config.build()
+i=0
+for config in luxuri_configs:
+    if(i==5):
+        break
+    print=(config.get_config_name())
+    config.build()
+    i+=1
 
 move_files("./.pio/build/combinations/","./.pio/build/",(".hex",".bin"))

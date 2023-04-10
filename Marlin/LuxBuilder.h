@@ -62,6 +62,8 @@
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 415, 415 }
 #elif ENABLED(HictopTitan)
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 382.17, 382.17 }
+#elif ENABLED(BMGExtruder)
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 413, 413 }
 #else // Stock Toolhead
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 92.6, 92.6 }
 #endif
