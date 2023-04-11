@@ -10,6 +10,6 @@ release = os.environ.get('LUX_RELEASE')
 filename = version
 if release != "1":
     filename += "." + build
-filename += " " + config
+filename += "_" + config
 
-env.Replace(PROGNAME="Luxuri %s" % filename)
+env.Replace(PROGNAME="Luxuri_%s" % filename)

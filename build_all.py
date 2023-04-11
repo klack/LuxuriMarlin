@@ -2,6 +2,14 @@ import os
 import sys
 import shutil
 
+build_folder = "./.pio/build/configurations/"
+work_folder = "./.pio/build/configurations/src/"
+
+try:
+    shutil.rmtree(build_folder)
+except:
+    print("Could not remove build folder")
+
 if len( sys.argv ) > 1 and sys.argv[1] == "release":
     os.environ['LUX_RELEASE'] = "1"
 else:
@@ -27,11 +35,11 @@ class LuxuriConfig:
         for string in self.flags:
             get_command_flags += ("-D" + string + " ")
         return get_command_flags
-    def build(self): # Run the build command with the appropriate environment variables
+    def build(self,i): # Run the build command with the appropriate environment variables
         os.environ['PLATFORMIO_BUILD_FLAGS'] = self.get_command_flags() + "-DTENLOG_CONFIG=" + self.get_config_name() #Add in Tenlog Config Type string
-        os.environ['PLATFORMIO_BUILD_DIR'] = "./.pio/build/combinations/" + self.get_config_name()
+        os.environ['PLATFORMIO_BUILD_DIR'] = work_folder + str(i)
         os.environ['LUX_CONFIG_NAME'] = self.get_config_name()
-        os.system('pio run --environment BuildCombination')        
+        os.system('pio run --environment BuildConfiguration')        
     def __init__(self, flags):
         self.flags = flags
 
@@ -75,7 +83,13 @@ for config in luxuri_configs:
     if(i>5):
         break
     print=(config.get_config_name())
-    config.build()
+    config.build(i)
     i+=1
 
-move_files("./.pio/build/combinations/","./.pio/build/",(".hex",".bin"))
+
+move_files(work_folder, build_folder, (".hex",".bin"))
+
+try:
+    shutil.rmtree(work_folder)
+except:
+    print("Could not remove work folder")

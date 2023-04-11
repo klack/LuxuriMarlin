@@ -1,9 +1,10 @@
 #
-# Generate versions and build numbers
+#   Generate versions and build numbers
+#   Used by platform.io common.extra_scripts
 #
+
 import os
 import datetime
-tm = datetime.datetime.today()
 
 FILENAME_VERSION = 'Marlin\src\inc\Lux_version'
 FILENAME_VERSION_H = 'Marlin\src\inc\Lux_version.h'
