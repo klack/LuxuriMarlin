@@ -64,9 +64,9 @@ print(len(luxuri_configs))
 i=0
 for config in luxuri_configs:
     if(i==0): #Only increment the build number once
-        os.environ['LUX_INCREMENT_BUILD'] = "1"
+        os.environ['LUX_SKIP_INCREMENT'] = "0"
     else:
-        os.environ['LUX_INCREMENT_BUILD'] = "0"
+        os.environ['LUX_SKIP_INCREMENT'] = "1"
     print=(config.get_config_name())
     config.build()
     i+=1
