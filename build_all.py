@@ -2,6 +2,11 @@ import os
 import sys
 import shutil
 
+if len( sys.argv ) > 1 and sys.argv[1] == "release":
+    os.environ['LUXURI_RELEASE'] = "1"
+else:
+    os.environ['LUXURI_RELEASE'] = "0"
+
 def move_files(src_dir, dest_dir, file_exts):
     for root, dirs, files in os.walk(src_dir):
         for file in files:
@@ -67,6 +72,8 @@ for config in luxuri_configs:
         os.environ['LUX_SKIP_INCREMENT'] = "0"
     else:
         os.environ['LUX_SKIP_INCREMENT'] = "1"
+    if(i>10):
+        break
     print=(config.get_config_name())
     config.build()
     i+=1

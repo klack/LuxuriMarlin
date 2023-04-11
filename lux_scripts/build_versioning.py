@@ -25,14 +25,16 @@ if not (os.environ.get('LUX_SKIP_INCREMENT') == "1"):
     build_no+=1
     build_date = f"{datetime.datetime.now():%Y-%m-%d %H:%M:%S}"
 
+os.environ['LUXURI_VERSION'] = version
+os.environ['LUXURI_BUILD'] = str(build_no)
+    
 with open(FILENAME_VERSION, 'w+') as f:
     f.write(version + "\n")
     f.write(str(build_no) + "\n")
     f.write(build_date + "\n")
     print('Build number: {}'.format(build_no))
 
-hf = """ 
-#ifndef BUILD_NUMBER
+hf = """#ifndef BUILD_NUMBER
   #define BUILD_NUMBER "{}"
 #endif
 #ifndef DETAILED_BUILD_VERSION
