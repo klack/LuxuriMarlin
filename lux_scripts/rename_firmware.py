@@ -1,4 +1,15 @@
 import os
-
 Import("env")
-env.Replace(PROGNAME="Luxuri_%s" % os.environ['LUXURI_CONFIG_NAME'])
+
+filename = ""
+version = os.environ.get('LUX_VERSION')
+build = os.environ.get('LUX_BUILD')
+config = os.environ.get('LUX_CONFIG_NAME')
+release = os.environ.get('LUX_RELEASE')
+
+filename = version
+if release != "1":
+    filename += "." + build
+filename += " " + config
+
+env.Replace(PROGNAME="Luxuri %s" % filename)
