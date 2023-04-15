@@ -1,0 +1,9 @@
+#ifndef BUILD_NUMBER
+  #define BUILD_NUMBER "57"
+#endif
+#ifndef DETAILED_BUILD_VERSION
+  #define DETAILED_BUILD_VERSION "2.1.X.0 build 57 2023-04-14 20:21:06"
+#endif
+#ifndef SHORT_BUILD_VERSION
+  #define SHORT_BUILD_VERSION "2.1.X.0"
+#endif

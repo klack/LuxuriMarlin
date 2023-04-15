@@ -16,7 +16,7 @@
   #define LUX_X_MAX_POS  LUX_X_BED_SIZE
   #define LUX_X2_MIN_POS 15
   #define LUX_X2_MAX_POS 279
-  #define LUX_Y_MAX_POS 253
+  #define LUX_Y_MAX_POS 240
   #define LUX_Z_MAX_POS 260
 #elif ENABLED(TenlogD3)
   #define LUX_X_BED_SIZE 310
@@ -62,6 +62,8 @@
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 415, 415 }
 #elif ENABLED(HictopTitan)
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 382.17, 382.17 }
+#elif ENABLED(BMGExtruder)
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 413, 413 }
 #else // Stock Toolhead
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 92.6, 92.6 }
 #endif

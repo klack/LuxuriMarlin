@@ -24,17 +24,17 @@
 /**
  * Release version. Leave the Marlin version or apply a custom scheme.
  */
-#ifndef SHORT_BUILD_VERSION
-  #define SHORT_BUILD_VERSION "2.1.x"
-#endif
+// #ifndef SHORT_BUILD_VERSION
+//   #define SHORT_BUILD_VERSION "2.1.x"
+// #endif
 
 /**
  * Verbose version identifier containing a unique identifier, such as the
  * vendor name, download location, GitHub account, etc.
  */
-#ifndef DETAILED_BUILD_VERSION
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
-#endif
+// #ifndef DETAILED_BUILD_VERSION
+//   #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
+// #endif
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
