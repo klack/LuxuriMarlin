@@ -35,7 +35,7 @@
  * Bed Endstop
  */
 #define OpticalYBedEndstop // (Stock)
-// #define ManualBedEndstop
+// #define LeafSwitchEndstop
 
 /**
  * Power Switch Type

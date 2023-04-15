@@ -57,7 +57,7 @@
 #endif
 
 //Bed Endstop
-#if ENABLED(ManualBedEndstop)
+#if ENABLED(LeafSwitchEndstop)
   #define LUX_Y_MIN_ENDSTOP_INVERTING false
 #else //Optical Y
   #define LUX_Y_MIN_ENDSTOP_INVERTING true

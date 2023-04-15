@@ -49,7 +49,7 @@ list2 = ["TMC2208Drivers", "TMC2209Drivers", "A4988Drivers"]
 list3 = ["", "BMGExtruder" "HictopTitan"]
 list4 = ["", "BLTouchProbe"]
 list5 = ["", "MaintainedPowerSwitch"]
-list6 = ["", "ManualBedEndstop"]
+list6 = ["", "LeafSwitchEndstop"]
 
 combinations = [
     (a, b, c, d, e, f) 
