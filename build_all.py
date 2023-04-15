@@ -44,7 +44,7 @@ class LuxuriConfig:
         self.flags = flags
 
 # Build a list containing the desired build combinations
-list1 = ["TenlogD6"] #"TenlogHands2", "TenlogD3", "TenlogD5"]
+list1 = ["TenlogHands2", "TenlogD3", "TenlogD5", "TenlogD6"]
 list2 = ["TMC2208Drivers", "TMC2209Drivers", "A4988Drivers"]
 list3 = ["", "BMGExtruder" "HictopTitan"]
 list4 = ["", "BLTouchProbe"]
@@ -83,7 +83,7 @@ for config in luxuri_configs:
     if(i>5):
         break
     print=(config.get_config_name())
-    # config.build(i)
+    config.build(i)
     i+=1
 
 
