@@ -36,6 +36,15 @@
   #define LUX_X2_MAX_POS 554
   #define LUX_Y_MAX_POS 533
   #define LUX_Z_MAX_POS 610
+#elif ENABLED(TenlogD6)
+  #define LUX_X_BED_SIZE 605
+  #define LUX_Y_BED_SIZE 620
+  #define LUX_X_MIN_POS -47
+  #define LUX_X_MAX_POS  LUX_X_BED_SIZE  
+  #define LUX_X2_MIN_POS 15
+  #define LUX_X2_MAX_POS 654
+  #define LUX_Y_MAX_POS 633
+  #define LUX_Z_MAX_POS 610
 #endif
 
 //Bed Type
@@ -70,12 +79,14 @@
 
 #if ENABLED(HictopTitan) && ENABLED(TenlogD3)
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 142
+#elif ENABLED(TenlogHands2)
+  #define LUX_DEFAULT_DUPLICATION_X_OFFSET 115
 #elif ENABLED(TenlogD3)
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 155
 #elif ENABLED(TenlogD5)
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 250
-#elif ENABLED(TenlogHands2)
-  #define LUX_DEFAULT_DUPLICATION_X_OFFSET 115
+#elif ENABLED(TenlogD6)
+  #define LUX_DEFAULT_DUPLICATION_X_OFFSET 305
 #endif
 
 #if ENABLED(AllMetalHotend)
