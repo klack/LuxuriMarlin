@@ -46,10 +46,10 @@ class LuxuriConfig:
 # Build a list containing the desired build combinations
 list1 = ["TenlogHands2", "TenlogD3", "TenlogD5", "TenlogD6"]
 list2 = ["TMC2208Drivers", "TMC2209Drivers", "A4988Drivers"]
-list3 = ["", "BMGExtruder", "HictopTitan"]
+list3 = ["", "BMGExtruder", "HictopTitanExtruder"]
 list4 = ["", "BLTouchProbe"]
 list5 = ["", "MaintainedPowerSwitch"]
-list6 = ["", "LeafSwitchEndstop"]
+list6 = ["", "LeafSwitchYEndstop"]
 
 combinations = [
     (a, b, c, d, e, f) 

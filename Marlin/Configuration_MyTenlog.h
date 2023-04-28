@@ -4,8 +4,8 @@
  * ***************************************************************************
  *
  *   Comment and uncomment lines to match your machine configuration
- *     or visit our Github Releases page for precompiled firmare.
- *   Visit our Github Wiki for help identifying parts.
+ *     or visit our Github Releases (https://github.com/klack/LuxuriMarlin/releases) page for precompiled firmare.
+ *   Visit our Github Wiki (https://github.com/klack/LuxuriMarlin/wiki) for help identifying parts.
  *
  */
 
@@ -34,8 +34,8 @@
 /**
  * Bed Endstop
  */
-#define OpticalYBedEndstop // (Stock)
-// #define LeafSwitchEndstop
+#define OpticalYEndstop // (Stock)
+// #define LeafSwitchYEndstop
 
 /**
  * Power Switch Type
@@ -46,13 +46,9 @@
 /**
  * Toolhead
  */
-#define TenlogToolhead // (Stock)
-// #define TenlogBMGToolhead
-// #define BMGSuperVolcano
-// #define HictopTitan // https://www.amazon.com/Titan-extruder-HICTOP-Hero-Tenlog/dp/B083TKZWZ1/
-// #define BMGExtruderV2 // https://www.thingiverse.com/thing:4886319 by Andrew Seago
-// #define BMGExtruderV3 // https://www.thingiverse.com/thing:5207843 by Andrew Seago
-// #define H2Extruder // https://www.thingiverse.com/thing:5355296 by Brandon Smith
+#define NonGearedExtruder // (Stock)
+// #define BMGExtruder
+// #define HictopTitanExtruder
 
 /**
  * Hotend
@@ -61,24 +57,6 @@
 // #define AllMetalHotend
 
 /**
- * Filament Sensor
- */
-#define TenlogFilaSensor // (Stock)
-// #define BTTFilaSensor
-
-/**
  * Probe
  */
 // #define BLTouchProbe
-
-/**
- * Alternate Motherboards
- */
-// #define OctopusBoard // https://www.thingiverse.com/thing:4886287 by Andrew Seago
-
-/**
- * Alternate Screens
- * DWIN is not supported by this firmware, visit https://github.com/InsanityAutomation/Marlin/tree/Tenlog_DWIN
- */
-// #define BTTTFTScreen
-// #define LCDmini12864Screen

@@ -57,7 +57,7 @@
 #endif
 
 //Bed Endstop
-#if ENABLED(LeafSwitchEndstop)
+#if ENABLED(LeafSwitchYEndstop)
   #define LUX_Y_MIN_ENDSTOP_INVERTING false
 #else //Optical Y
   #define LUX_Y_MIN_ENDSTOP_INVERTING true
@@ -69,7 +69,7 @@
 //Toolhead
 #if ENABLED(TenlogBMGToolhead)||ENABLED(BMGSuperVolcano)||ENABLED(BMGExtruderV2)||ENABLED(BMGExtruderV3)
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 415, 415 }
-#elif ENABLED(HictopTitan)
+#elif ENABLED(HictopTitanExtruder)
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 382.17, 382.17 }
 #elif ENABLED(BMGExtruder)
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 413, 413 }
@@ -77,7 +77,7 @@
   #define LUX_DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 800, 92.6, 92.6 }
 #endif
 
-#if ENABLED(HictopTitan) && ENABLED(TenlogD3)
+#if ENABLED(HictopTitanExtruder) && ENABLED(TenlogD3)
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 142
 #elif ENABLED(TenlogHands2)
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 115
@@ -132,7 +132,7 @@
   #define LUX_INVERT_Y_DIR true
   #define LUX_INVERT_Z_DIR false
   #define LUX_INVERT_E0_DIR true
-  #if ENABLED(HictopTitan)
+  #if ENABLED(HictopTitanExtruder)
     #define LUX_INVERT_E1_DIR true
   #else
     #define LUX_INVERT_E1_DIR false
@@ -144,7 +144,7 @@
   #define LUX_INVERT_Y_DIR true
   #define LUX_INVERT_Z_DIR false
   #define LUX_INVERT_E0_DIR true
-  #if ENABLED(HictopTitan)
+  #if ENABLED(HictopTitanExtruder)
     #define LUX_INVERT_E1_DIR true
   #else
     #define LUX_INVERT_E1_DIR false
@@ -156,7 +156,7 @@
   #define LUX_INVERT_Y_DIR false
   #define LUX_INVERT_Z_DIR true
   #define LUX_INVERT_E0_DIR false
-  #if ENABLED(HictopTitan)
+  #if ENABLED(HictopTitanExtruder)
     #define LUX_INVERT_E1_DIR false
   #else
     #define LUX_INVERT_E1_DIR true
@@ -169,7 +169,7 @@
   #undef LUX_INVERT_E1_DIR
   #define LUX_E_DRIVER_TYPE TMC2209_STANDALONE
   #define LUX_INVERT_E0_DIR true
-  #if ENABLED(HictopTitan)
+  #if ENABLED(HictopTitanExtruder)
     #define LUX_INVERT_E1_DIR true
   #else
     #define LUX_INVERT_E1_DIR false
