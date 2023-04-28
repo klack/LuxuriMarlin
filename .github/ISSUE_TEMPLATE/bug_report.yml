@@ -102,7 +102,21 @@ body:
     attributes:
       label: Machine Configuration
       description: Viewable on boot screen.  i.e. Tenlog D3, 2208 Drivers, BMG Extruder
+    validations:
+      required: true    
 
+
+  - type: dropdown
+    attributes:
+      label: Idex operation mode
+      options:
+        - Auto
+        - Printing from E2 only
+        - Clone mode
+        - Mirror mode
+    validations:
+      required: true      
+        
   - type: dropdown
     attributes:
       label: Your Slicer
