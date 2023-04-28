@@ -154,13 +154,6 @@ body:
       value: |
         # Attachments
 
-  - type: checkboxes
-    attributes:
-      label: Don't forget to include
-      options:
-        - label: A ZIP file containing your `Configuration.h` and `Configuration_adv.h`.
-          required: true
-
   - type: markdown
     attributes:
       value: |
