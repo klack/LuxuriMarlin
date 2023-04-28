@@ -81,8 +81,8 @@ body:
         1. [First Step] ...
         2. [Second Step] ...
         3. [and so on] ...
-      validations:
-        required: true        
+    validations:
+      required: true        
 
   - type: input
     attributes:
