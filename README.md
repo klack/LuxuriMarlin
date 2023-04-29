@@ -10,5 +10,16 @@ We've also written a whole new interface that unlocks the power of it's HMI scre
 -    Fullly featured console, access all settings of your machine
 -    G-code keyboard
 
+![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/home.png)
+
+![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/mesh.png)
+
+![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/console.png)
+
+![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/console2.png)
+
+![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/console3.png)
+
+
 ### [Download releases](https://github.com/klack/LuxuriMarlin/releases)
 ### Join us on [Discord](https://discord.gg/w8gMzQq8Bp)
