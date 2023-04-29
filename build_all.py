@@ -10,7 +10,7 @@ try:
 except:
     print("Could not remove build folder")
 
-if len( sys.argv ) > 1 and sys.argv[1] == "release":
+if len( sys.argv ) > 1 and sys.argv[1] == "release": # Designates this build as a release.  Currently removes build number from filename.
     os.environ['LUX_RELEASE'] = "1"
 else:
     os.environ['LUX_RELEASE'] = "0"
