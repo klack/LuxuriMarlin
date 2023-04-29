@@ -20,6 +20,6 @@ We've also written a whole new interface that unlocks the power of it's HMI scre
 
 ![Console](https://github.com/klack/LuxuriMarlin/blob/luxmarlin-2.1.x/docs/features/console3.png)
 
-
+### Read [instructions](https://github.com/klack/LuxuriMarlin/wiki)
 ### Download from the [releases](https://github.com/klack/LuxuriMarlin/releases) page
 ### Join us on [Discord](https://discord.gg/w8gMzQq8Bp)
