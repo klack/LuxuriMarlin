@@ -10,7 +10,7 @@ try:
 except:
     print("Could not remove build folder")
 
-if len( sys.argv ) > 1 and sys.argv[1] == "release":
+if len( sys.argv ) > 1 and sys.argv[1] == "release": # Designates this build as a release.  Currently removes build number from filename.
     os.environ['LUX_RELEASE'] = "1"
 else:
     os.environ['LUX_RELEASE'] = "0"
@@ -46,10 +46,10 @@ class LuxuriConfig:
 # Build a list containing the desired build combinations
 list1 = ["TenlogHands2", "TenlogD3", "TenlogD5", "TenlogD6"]
 list2 = ["TMC2208Drivers", "TMC2209Drivers", "A4988Drivers"]
-list3 = ["", "BMGExtruder", "HictopTitan"]
+list3 = ["", "BMGExtruder", "HictopTitanExtruder"]
 list4 = ["", "BLTouchProbe"]
 list5 = ["", "MaintainedPowerSwitch"]
-list6 = ["", "LeafSwitchEndstop"]
+list6 = ["", "LeafSwitchYEndstop"]
 
 combinations = [
     (a, b, c, d, e, f) 
