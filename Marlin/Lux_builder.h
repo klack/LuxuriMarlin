@@ -90,8 +90,8 @@
 #endif
 
 #if ENABLED(AllMetalHotend)
-  #define LUX_HEATER_0_MAXTEMP 310
-  #define LUX_HEATER_1_MAXTEMP 310
+  #define LUX_HEATER_0_MAXTEMP 275
+  #define LUX_HEATER_1_MAXTEMP 275
 #else
   #define LUX_HEATER_0_MAXTEMP 255
   #define LUX_HEATER_1_MAXTEMP 255
