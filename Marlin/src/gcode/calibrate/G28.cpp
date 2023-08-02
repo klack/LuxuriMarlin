@@ -120,6 +120,15 @@
     sync_plan_position();
 
     /**
+     * Home after Z Probe by cryoaura
+     */
+    const float currentSafeXpos = current_position.x;
+    const float currentSafeYpos = current_position.y;
+    /**
+     * End Home after Z Probe by cryoaura
+     */
+
+    /**
      * Move the Z probe (or just the nozzle) to the safe homing point
      * (Z is already at the right height)
      */
@@ -146,6 +155,17 @@
 
       do_blocking_move_to_xy(destination);
       homeaxis(Z_AXIS);
+
+      /**
+       * Home after Z Probe by cryoaura
+       */
+      destination.set(currentSafeXpos, currentSafeYpos, current_position.z);
+      if (position_is_reachable(destination)) {
+        do_blocking_move_to_xy(destination);
+      }
+      /**
+      * End Home after Z Probe by cryoaura
+      */
     }
     else {
       LCD_MESSAGE(MSG_ZPROBE_OUT);
@@ -347,7 +367,18 @@ void GcodeSuite::G28() {
     #if ENABLED(PARKING_EXTRUDER)
       const bool pe_final_change_must_unpark = parking_extruder_unpark_after_homing(old_tool_index, X_HOME_DIR + 1 == old_tool_index * 2);
     #endif
+    /**
+     * Home after Z Probe by cryoaura
+     */
+    #if ENABLED(DUAL_X_CARRIAGE)
+      tool_change(0, false);
+    #else
+      tool_change(0, true);
+    #endif
     tool_change(0, true);
+    /**
+     * End Home after Z Probe by cryoaura
+     */
   #endif
 
   TERN_(HAS_DUPLICATION_MODE, set_duplication_enabled(false));

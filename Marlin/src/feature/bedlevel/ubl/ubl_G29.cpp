@@ -1827,7 +1827,8 @@ void unified_bed_leveling::smart_fill_mesh() {
       SERIAL_ECHOLNPGM("Meshes go from ", hex_address((void*)settings.meshes_start_index()), " to ", hex_address((void*)settings.meshes_end_index()));
       serial_delay(50);
 
-      SERIAL_ECHOLNPGM("sizeof(ubl) :  ", sizeof(ubl));         SERIAL_EOL();
+      // Luxuri: Disabled, causing error on output
+      // SERIAL_ECHOLNPGM("sizeof(ubl) :  ", sizeof(ubl));         SERIAL_EOL();
       SERIAL_ECHOLNPGM("z_value[][] size: ", sizeof(z_values)); SERIAL_EOL();
       serial_delay(25);
 

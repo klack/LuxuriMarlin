@@ -36,6 +36,12 @@
 
 #include "../core/macros.h"
 #include "../core/boards.h"
+
+#ifdef MY_TENLOG
+  #include "../../Configuration_MyTenlog.h"
+#endif
+
+#include "../../Lux_builder.h"
 #include "../../Configuration.h"
 
 #ifdef CUSTOM_VERSION_FILE
@@ -45,6 +51,7 @@
 #endif
 
 #include "Version.h"
+#include "Lux_version.h"
 
 #include "Conditionals_LCD.h"
 

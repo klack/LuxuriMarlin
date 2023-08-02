@@ -24,17 +24,17 @@
 /**
  * Release version. Leave the Marlin version or apply a custom scheme.
  */
-#ifndef SHORT_BUILD_VERSION
-  #define SHORT_BUILD_VERSION "2.1.2.1"
-#endif
+// #ifndef SHORT_BUILD_VERSION
+//   #define SHORT_BUILD_VERSION "2.1.2.1"
+// #endif
 
 /**
  * Verbose version identifier containing a unique identifier, such as the
  * vendor name, download location, GitHub account, etc.
  */
-#ifndef DETAILED_BUILD_VERSION
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
-#endif
+// #ifndef DETAILED_BUILD_VERSION
+//   #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
+// #endif
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
@@ -73,7 +73,7 @@
  * Define a generic printer name to be output to the LCD after booting Marlin.
  */
 #ifndef MACHINE_NAME
-  #define MACHINE_NAME "3D Printer"
+  #define MACHINE_NAME "Tenlog"
 #endif
 
 /**
@@ -82,7 +82,7 @@
  * providing the source code to your customers.)
  */
 #ifndef SOURCE_CODE_URL
-  #define SOURCE_CODE_URL "github.com/MarlinFirmware/Marlin"
+  #define SOURCE_CODE_URL "github.com/klack/LuxuriMarlin"
 #endif
 
 /**

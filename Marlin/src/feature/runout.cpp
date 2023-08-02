@@ -101,6 +101,7 @@ void event_filament_runout(const uint8_t extruder) {
 
   const bool run_runout_script = !runout.host_handling;
 
+  PORT_REDIRECT(SerialMask::All);
   #if ENABLED(HOST_ACTION_COMMANDS)
     if (run_runout_script
       && ( strstr(FILAMENT_RUNOUT_SCRIPT, "M600")

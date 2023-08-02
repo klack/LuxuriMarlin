@@ -196,7 +196,7 @@
 #elif MB(TENLOG_D3_HERO)
   #include "ramps/pins_TENLOG_D3_HERO.h"        // ATmega2560                             env:mega2560
 #elif MB(TENLOG_MB1_V23)
-  #include "ramps/pins_TENLOG_MB1_V23.h"        // ATmega2560                             env:mega2560
+  #include "ramps/pins_TENLOG_MB1_V23.h"        // ATmega2560                             env:mega2560 env:My_Tenlog env:BuildConfiguration
 #elif MB(MKS_GEN_L_V21)
   #include "ramps/pins_MKS_GEN_L_V21.h"         // ATmega2560                             env:mega2560
 #elif MB(RAMPS_S_12_EEFB, RAMPS_S_12_EEEB, RAMPS_S_12_EFFB)

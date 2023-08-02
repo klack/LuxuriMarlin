@@ -1425,6 +1425,7 @@ void tool_change(const uint8_t new_tool, bool no_move/*=false*/) {
       #endif
     }
 
+    PORT_REDIRECT(SerialMask::All);
     SERIAL_ECHOLNPGM(STR_ACTIVE_EXTRUDER, active_extruder);
 
   #endif // HAS_MULTI_EXTRUDER
