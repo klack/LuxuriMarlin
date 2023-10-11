@@ -21,21 +21,21 @@
  * Stepper Drivers
  */
 // #define A4988Drivers
-#define TMC2208Drivers // (Stock most of the time)
-// #define TMC2209Drivers
+// #define TMC2208Drivers // (Stock most of the time)
+#define TMC2209Drivers
 // #define TMC2209ExtrudersOnly //2209 drivers on extruders only
 
 /**
  * Bed Type
  */
-#define DCBed //(Stock)
-// #define ACBed
+// #define DCBed //(Stock)
+#define ACBed
 
 /**
  * Bed Endstop
  */
-#define OpticalYEndstop // (Stock)
-// #define MechanicalYEndstop
+// #define OpticalYEndstop // (Stock)
+#define MechanicalYEndstop
 
 /**
  * Power Switch Type
@@ -46,15 +46,15 @@
 /**
  * Toolhead
  */
-#define NonGearedExtruder // (Stock)
+// #define NonGearedExtruder // (Stock)
 // #define BMGExtruder
-// #define HictopTitanExtruder
+#define HictopTitanExtruder
 
 /**
  * Hotend
  */
-#define PFTEHotened // (Stock)
-// #define AllMetalHotend
+// #define PFTEHotened // (Stock)
+#define AllMetalHotend
 
 /**
  * Probe

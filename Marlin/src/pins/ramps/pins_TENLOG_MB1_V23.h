@@ -105,6 +105,12 @@
 //
 // PSU and Powerloss Recovery
 //
+#if ENABLED(MaintainedPowerSwitch)
+  //nothing
+#else
+  #define KILL_PIN 32
+  #define KILL_PIN_STATE HIGH
+#endif
 #if ENABLED(PSU_CONTROL)
   #define PS_ON_PIN                           40  // The M80/M81 PSU pin for boards v2.1-2.3
 #endif
@@ -148,9 +154,5 @@
 //#define BTN_EN1                             31
 //#define BTN_EN2                             33
 //#define BTN_ENC                             35
-
-//#ifndef KILL_PIN
-//  #define KILL_PIN                          41
-//#endif
 
 //#endif // IS_RRD_SC
