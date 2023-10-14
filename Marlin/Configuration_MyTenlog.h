@@ -28,14 +28,14 @@
 /**
  * Bed Type
  */
-// #define DCBed //(Stock)
-#define ACBed
+#define DCBed //(Stock)
+// #define ACBed
 
 /**
  * Bed Endstop
  */
-// #define OpticalYEndstop // (Stock)
-#define MechanicalYEndstop
+#define OpticalYEndstop // (Stock)
+// #define MechanicalYEndstop
 
 /**
  * Power Switch Type
@@ -47,14 +47,14 @@
  * Toolhead
  */
 // #define NonGearedExtruder // (Stock)
-// #define BMGExtruder
-#define HictopTitanExtruder
+#define BMGExtruder
+// #define HictopTitanExtruder
 
 /**
  * Hotend
  */
-// #define PFTEHotened // (Stock)
-#define AllMetalHotend
+#define PFTEHotened // (Stock)
+// #define AllMetalHotend
 
 /**
  * Probe
