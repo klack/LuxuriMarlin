@@ -10,11 +10,6 @@ try:
 except:
     print("Could not remove build folder")
 
-if len( sys.argv ) > 1 and sys.argv[1] == "release": # Designates this build as a release.  Currently removes build number from filename.
-    os.environ['LUX_RELEASE'] = "1"
-else:
-    os.environ['LUX_RELEASE'] = "0"
-
 def move_files(src_dir, dest_dir, file_exts):
     for root, dirs, files in os.walk(src_dir):
         for file in files:
