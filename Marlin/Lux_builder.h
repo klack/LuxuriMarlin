@@ -50,10 +50,8 @@
 //Bed Type
 #if ENABLED(ACBed)
   #define LUX_TEMP_SENSOR_BED 11
-  #define LUX_BED_MAXTEMP 120
 #else //DC Bed
   #define LUX_TEMP_SENSOR_BED 1
-  #define LUX_BED_MAXTEMP 90
 #endif
 
 //Bed Endstop
