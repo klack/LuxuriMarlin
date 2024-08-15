@@ -87,13 +87,10 @@
   #define LUX_DEFAULT_DUPLICATION_X_OFFSET 305
 #endif
 
-#if ENABLED(AllMetalHotend)
-  #define LUX_HEATER_0_MAXTEMP 275
-  #define LUX_HEATER_1_MAXTEMP 275
-#else
-  #define LUX_HEATER_0_MAXTEMP 255
-  #define LUX_HEATER_1_MAXTEMP 255
-#endif
+
+#define LUX_HEATER_0_MAXTEMP 275
+#define LUX_HEATER_1_MAXTEMP 275
+
 
 //Filament Sensor
 #define LUX_NUM_RUNOUT_SENSORS 1
