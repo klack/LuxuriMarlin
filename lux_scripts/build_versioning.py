@@ -6,8 +6,8 @@
 import os
 import datetime
 
-FILENAME_VERSION = 'Marlin\src\inc\Lux_version'
-FILENAME_VERSION_H = 'Marlin\src\inc\Lux_version.h'
+FILENAME_VERSION = r'Marlin\src\inc\Lux_version'
+FILENAME_VERSION_H = r'Marlin\src\inc\Lux_version.h'
 version = ""
 build_no = 0
 build_date = ""
